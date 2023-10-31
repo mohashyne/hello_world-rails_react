@@ -1,4 +1,4 @@
-#!/usr/bin/env sh
+# #!/usr/bin/env sh
 
 if ! gem list foreman -i --silent; then
   echo "Installing foreman..."
@@ -9,3 +9,14 @@ fi
 export PORT="${PORT:-3000}"
 
 exec foreman start -f Procfile.dev "$@"
+
+
+
+# #!/usr/bin/env sh
+
+# if bundle exec rails s -b 127.0.0.1 -p ${PORT:-3000} 2>/dev/null; then
+#   echo "Rails server started on port ${PORT:-3000}"
+# else
+#   echo "Failed to start Rails server. Please check your configuration."
+# fi
+
